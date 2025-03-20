@@ -34,6 +34,14 @@ def pop():
         top -= 1  # top 포인터 감소
         print(f"삭제된 값: {removed_item}")
 
+def generate_sequence(n):
+    for i in range(1, n + 1):
+        push(i)
+        print("넣는 값:", i)
+    
+    while top != -1:
+        pop()
+
 # 사용자 정의 스택 리스트 및 top 포인터 초기화
 stack = [] 
 top = -1  # 스택이 비어있음을 의미
@@ -42,7 +50,7 @@ top = -1  # 스택이 비어있음을 의미
 if __name__ == "__main__": 
     while True:
         # 사용자 입력을 받아 동작 선택
-        num = int(input("1:삽입, 2:삭제, 3:종료 => "))
+        num = int(input("1:삽입, 2:삭제, 3:종료, 4:수열 => "))
         
         if num == 1:  # 삽입 연산 선택
             val = int(input("삽입할 데이터 => "))
@@ -56,6 +64,10 @@ if __name__ == "__main__":
         elif num == 3:  # 프로그램 종료 선택
             print("프로그램 종료")
             break
+
+        elif num == 4:
+            n = int(input("n 값을 입력하세요: "))
+            generate_sequence(n)
         
         else:  # 잘못된 입력 처리
             print("잘못된 입력입니다. 다시 입력하세요.")
