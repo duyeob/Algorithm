@@ -1,4 +1,4 @@
-class SList: # s 리스트 생성 하면서 노드 크래스 생성 노드 클ㄹ스가 slist 안에 들어가야댐 중첩 클래스:
+class SList: # s 리스트 생성 하면서 노드 크래스 생성 노드 클래스가 slist 안에 들어가야댐 중첩 클래스:
     class Node:
         def __init__(self, item , link):  # node 클래스 멤버 함수
             self.item = item 
