@@ -50,15 +50,7 @@ class SList:
             del temp
             self.size -= 1
 
-    #사용자가 원하는 인덱스에 새로운 노드 삽입하는 함수
-    def insert_index(self,index,item):
-        pass
-    #사용자가 원하는 인덱스에 있는 노드를 삭제하는 함수
-    def delete_index(self,index):
-        pass
-    #연결리스트의 맨 마지막 노드를 삭제하는 함수
-    def delete_final(self):
-        pass
+
 
     def showList(self):
         p = self.head
@@ -88,16 +80,4 @@ if __name__ == "__main__":
     s.insert_front("melon")
     s.remove_after(s.head)
     print("mango노드 삭제후")
-    s.showList()
-
-    #실습과제를 위해 추가된 코드
-    s.insert_front('kiwi')
-    s.insert_front('strawberry')
-    s.insert_front('grape')
-    s.insert_front('peach')
-    s.insert_front('banana')
-
-    s.insert_index(2,"pear")
-    s.delete_index(3)
-    s.delete_final()
     s.showList()
